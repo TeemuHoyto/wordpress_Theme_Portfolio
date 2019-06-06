@@ -1,0 +1,165 @@
+/*
+Theme Name: Wp-Summer_project
+Theme URI:
+Author: the WOLF team
+Author URI: 
+Description: 
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: Best theme ever
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*//* =Reset
+-------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100&display=swap');
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+html {
+    overflow-x: hidden;
+width:100vw;
+    font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+    overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
+    -webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+    -ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+body {
+    background: #fff;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
+}
+ol, ul {
+    list-style: none;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+    border-collapse: separate;
+    border-spacing: 0;
+}
+caption, th, td {
+    font-weight: normal;
+    text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: "";
+}
+blockquote, q {
+    quotes: "" "";
+}
+a:focus {
+    outline: thin dotted;
+}
+a:hover,
+a:active,
+a { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+    outline: 0;
+    text-decoration: none;
+    color:black;
+}
+a img {
+    border: 0;
+}
+/*-------------------------------------------------------------- */
+.link, .link:active, .link:hover, .link:focus{
+    color:black;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size:2em;
+  
+}
+  
+  .link_on_image, .link_on_image:active,.link_on_image:hover {
+    color:white;
+    width:100%;
+    font-family: 'Raleway', sans-serif;
+    position:absolute;
+    text-decoration: none;
+    margin-top:30vh;
+       margin-left: -50%;
+    text-align: center;
+    text-shadow:
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
+}
+.header_img{
+    width:100%;
+}
+.maincontainer{
+    font-family: 'Raleway', sans-serif;
+    font-size:9em;
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align:center;
+
+}
+.post_in_ul{
+    margin-top:0.5em;
+}
+.post-categories{
+    text-align:center;
+    font-size:2em;
+
+}
+.post_in_ul:hover{
+opacity:0.8;
+}
+h1{
+    font-family: 'Raleway', sans-serif;
+    font-size:9em;
+    text-align: center;
+    margin-bottom:0.5em;
+}
+p {
+    text-align:center;
+    font-size:2em;
+}
+ h2{
+    text-align:center;
+    font-size:2em;
+}
+footer{
+    font-family: 'Montserrat', sans-serif;
+    height:3em;
+    font-size:1.5rem;
+    background-color:black;
+    color:white;
+    text-align:center;
+    letter-spacing:0.2em;
+}
+.WP-footer-text{
+    padding-top:1em;
+}
