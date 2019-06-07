@@ -3,7 +3,8 @@
 *Function enqueues style  
 */
 function summertheme_scripts() {
-    wp_enqueue_style('main-styles', get_template_directory_uri() . '/my-style.css');
+   wp_enqueue_style('main-styles', get_template_directory_uri() . '/my-style.css');
+    wp_enqueue_style('summertheme-scripts',  get_template_directory_uri() . 'assets/css/app.css');
   
  }
 
@@ -51,21 +52,37 @@ add_action('get_header', 'remove_admin_login_header');
 /*
 *Function creates custom post type event 
 */
-function wporg_custom_post_type()
-{
-    register_post_type('event',
-                       array(
-                           'labels'      => array(
-                               'name'          => __('event'),
-                               'singular_name' => __('event'),
-                           ),
-                           'public'      => true,
-                           'has_archive' => true,
-                           'show_in_rest' => true,
-   'supports' => array('editor')
-                       )
+add_action('init', 'event_register');
+ 
+function event_register() {
+ 
+    $labels = array(
+        'name' => _x('Events', 'post type general name'),
+        'singular_name' => _x('Event', 'post type singular name'),
+        'add_new' => _x('Add New', 'event'),
+        'add_new_item' => __('Add New Event'),
+        'edit_item' => __('Edit Event'),
+        'new_item' => __('New Event'),
+        'view_item' => __('View Event'),
+        'search_items' => __('Search Events'),
+        'not_found' =>  __('Nothing found'),
+        'not_found_in_trash' => __('Nothing found in Trash'),
+        'parent_item_colon' => ''
     );
+ 
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'menu_position' => null,
+        'supports' => array('title','editor','thumbnail')
+      );
+ 
+    register_post_type( 'events' , $args );
 }
-add_action('init', 'wporg_custom_post_type');
-
 
